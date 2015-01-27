@@ -1,11 +1,13 @@
 #loopback-example-postgresql
 
+Basic instructions:
 ```
 git clone https://github.com/strongloop/loopback-example-postgresql.git
 cd loopback-example-postgresql
 npm install
-# then run any script in `server/bin` (ie. node server/bin/discover-schema.js)
 ```
+
+Then run any script in `server/bin` (for example, `node server/bin/discover-schema.js`).
 
 - [Prerequisites](#prerequisites)
 - [Procedure](#procedure)
