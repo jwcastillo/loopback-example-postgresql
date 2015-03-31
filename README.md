@@ -10,47 +10,39 @@ npm install
 
 Then run any script in `server/bin` (for example, `node server/bin/discover-schema.js`).
 
-<div class="confluence-hidden">
-
-- [Prerequisites](#prerequisites)
-- [Procedure](#procedure)
-  - [Create the application](#create-the-application)
-  - [Install the connector](#install-the-connector)
-  - [Configure the datasource](#configure-the-datasource)
-  - [Add a model](#add-a-model)
-  - [Add a script to migrate data](#add-a-script-to-migrate-data)
-  - [Add a script to discover a schema](#add-a-script-to-discover-a-schema)
-  - [Add a script to discover and build models](#add-a-script-to-discover-and-build-models)
-  - [Conclusion](#8-conclusion)
-</div>
+<ul class="confluence-hidden">
+<li><a href="#create-the-application">Create the application</a>
+<li> <a href="#install-the-connector">Install the connector</a>
+<li> <a href="#configure-the-datasource">Configure the datasource</a>
+<li> <a href="#add-a-model">Add a model</a>
+<li> <a href="#add-a-script-to-migrate-data">Add a script to migrate data</a>
+<li> <a href="#add-a-script-to-discover-a-schema">Add a script to discover a schema</a>
+<li> <a href="#add-a-script-to-discover-and-build-models">Add a script to discover and build models</a>
+</ul>
 
 ##Prerequisites
 
 - Follow [Getting started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack)
 - Read [LoopBack models](http://docs.strongloop.com/display/LB/Defining+models)
 
-##Procedure
-
-###Create the application
-
-####Application information
+##Create the application
 
 - Name: `loopback-example-postgresql`
 - Directory to contain the project: `loopback-example-postgresql`
 
 ```
-slc loopback loopback-example-postgresql
+$ slc loopback loopback-example-postgresql
 ... # follow the prompts
-cd loopback-example-postgresql
+$ cd loopback-example-postgresql
 ```
 
-###Install the connector
+##Install the connector
 
 ```
 npm install --save loopback-connector-postgresql
 ```
 
-###Configure the datasource
+##Configure the datasource
 
 ####Datasource information
 - Datasource: `accountDs`
@@ -66,9 +58,9 @@ Add the [datasource configurations](https://github.com/strongloop/loopback-examp
 
 > We provide a demo server for convenience sake, but feel free to use your own database server.
 
-###Add a model
+##Add a model
 
-####Model information
+###Model information
 - Name: `Account`
   - Datasource: `accountDs`
   - Base class: `PersistedModel`
@@ -90,7 +82,7 @@ slc loopback:model Account
 ... # follow the prompts
 ```
 
-###Add a script to migrate data
+##Add a script to migrate data
 
 Create a directory for to store scripts.
 
@@ -105,7 +97,7 @@ Create [`automigrate.js`](https://github.com/strongloop/loopback-example-postgre
 
 > [`datasSource.automigrate()`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js) requires INSERT object, CREATE DDL, and DROP DDL rights to execute properly.
 
-####Test the script
+###Test the script
 
 > #####WARNING
 > [`dataSource.automigrate()`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L18) creates a new table in the database if it doesn't exist. If the table already exists, it will be **DESTROYED** and **ALL** existing data will be dropped. If you want to keep the existing data, use `datasource.autoupdate()` instead.
@@ -119,14 +111,14 @@ This script creates [two models](https://github.com/strongloop/loopback-example-
 
 > You can view the newly inserted data using built-in [API explorer](http://docs.strongloop.com/display/LB/Use+API+Explorer). Start the application with `slc run` and browse to [`localhost:3000/explorer`][explorer] to inspect the data.
 
-###Add a script to discover a schema
+##Add a script to discover a schema
 
 > *Discovery* is the process of reverse engineering a LoopBack model from an existing database schema.
 
 Create [`discover-schema.js`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/discover-schema.js) inside the
 [`bin` directory](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin).
 
-####Test the script
+###Test the script
 
 ```
 node server/bin/discover-schema.js
@@ -210,12 +202,12 @@ You should see:
 }
 ```
 
-###Add a script to discover and build models
+##Add a script to discover and build models
 
 Create [`discover-and-build.js`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/discover-and-build.js) in the
 [`bin` directory](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin).
 
-####Test the script
+###Test the script
 
 ```
 node server/bin/discover-and-build.js
