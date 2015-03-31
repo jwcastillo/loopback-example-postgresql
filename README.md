@@ -43,6 +43,7 @@ $ cd loopback-example-postgresql
 npm install --save loopback-connector-postgresql
 ```
 
+<a name="#configure-the-datasource"></a>
 ##Configure the datasource
 
 ####Datasource information
