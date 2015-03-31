@@ -1,6 +1,7 @@
 #loopback-example-postgresql
 
 Basic instructions:
+
 ```
 git clone https://github.com/strongloop/loopback-example-postgresql.git
 cd loopback-example-postgresql
