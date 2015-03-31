@@ -10,15 +10,14 @@ npm install
 
 Then run any script in `server/bin` (for example, `node server/bin/discover-schema.js`).
 
-<ul class="confluence-hidden">
-<li><a href="#create-the-application">Create the application</a>
-<li> <a href="#install-the-connector">Install the connector</a>
-<li> <a href="#configure-the-datasource">Configure the datasource</a>
-<li> <a href="#add-a-model">Add a model</a>
-<li> <a href="#add-a-script-to-migrate-data">Add a script to migrate data</a>
-<li> <a href="#add-a-script-to-discover-a-schema">Add a script to discover a schema</a>
-<li> <a href="#add-a-script-to-discover-and-build-models">Add a script to discover and build models</a>
-</ul>
+- [Prerequisites](#prerequisites)
+- [Create the application](#create-the-application)
+- [Install the connector](#install-the-connector)
+- [Configure the datasource](#configure-the-datasource)
+- [Add a model](#add-a-model)
+- [Add a script to migrate data](#add-a-script-to-migrate-data)
+- [Add a script to discover a schema](#add-a-script-to-discover-a-schema)
+- [Add a script to discover and build models](#add-a-script-to-discover-and-build-models)
 
 ##Prerequisites
 
