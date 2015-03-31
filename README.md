@@ -10,6 +10,8 @@ npm install
 
 Then run any script in `server/bin` (for example, `node server/bin/discover-schema.js`).
 
+Contents:
+
 - [Prerequisites](#prerequisites)
 - [Create the application](#create-the-application)
 - [Install the connector](#install-the-connector)
