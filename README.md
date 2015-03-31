@@ -10,29 +10,27 @@ npm install
 
 Then run any script in `server/bin` (for example, `node server/bin/discover-schema.js`).
 
+<div class="confluence-hidden">
 - [Prerequisites](#prerequisites)
 - [Procedure](#procedure)
-  - [1. Create the application](#1-create-the-application)
-  - [2. Install the connector](#2-install-the-connector)
-  - [3. Configure the datasource](#3-configure-the-datasource)
-  - [4. Add a model](#4-add-a-model)
-  - [5. Add a script to migrate data](#5-add-a-script-to-migrate-data)
-  - [6. Add a script to discover a schema](#6-add-a-script-to-discover-a-schema)
-  - [7. Add a script to discover and build models](#7-add-a-script-to-discover-and-build-models)
-  - [8. Conclusion](#8-conclusion)
+  - [Create the application](#create-the-application)
+  - [Install the connector](#install-the-connector)
+  - [Configure the datasource](#configure-the-datasource)
+  - [Add a model](#add-a-model)
+  - [Add a script to migrate data](#add-a-script-to-migrate-data)
+  - [Add a script to discover a schema](#add-a-script-to-discover-a-schema)
+  - [Add a script to discover and build models](#add-a-script-to-discover-and-build-models)
+  - [Conclusion](#8-conclusion)
+</div>
 
 ##Prerequisites
 
-###Tutorials
-
-- [Getting started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack)
-
-###Knowledge
-- [LoopBack models](http://docs.strongloop.com/display/LB/Defining+models)
+- Follow [Getting started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack)
+- Read [LoopBack models](http://docs.strongloop.com/display/LB/Defining+models)
 
 ##Procedure
 
-###1. Create the application
+###Create the application
 
 ####Application information
 
@@ -45,13 +43,13 @@ slc loopback loopback-example-postgresql
 cd loopback-example-postgresql
 ```
 
-###2. Install the connector
+###Install the connector
 
 ```
 npm install --save loopback-connector-postgresql
 ```
 
-###3. Configure the datasource
+###Configure the datasource
 
 ####Datasource information
 - Datasource: `accountDs`
@@ -67,7 +65,7 @@ Add the [datasource configurations](https://github.com/strongloop/loopback-examp
 
 > We provide a demo server for convenience sake, but feel free to use your own database server.
 
-###4. Add a model
+###Add a model
 
 ####Model information
 - Name: `Account`
@@ -91,7 +89,7 @@ slc loopback:model Account
 ... # follow the prompts
 ```
 
-###5. Add a script to migrate data
+###Add a script to migrate data
 
 Create a directory for to store scripts.
 
@@ -120,7 +118,7 @@ This script creates [two models](https://github.com/strongloop/loopback-example-
 
 > You can view the newly inserted data using built-in [API explorer](http://docs.strongloop.com/display/LB/Use+API+Explorer). Start the application with `slc run` and browse to [`localhost:3000/explorer`][explorer] to inspect the data.
 
-###6. Add a script to discover a schema
+###Add a script to discover a schema
 
 > *Discovery* is the process of reverse engineering a LoopBack model from an existing database schema.
 
@@ -211,7 +209,7 @@ You should see:
 }
 ```
 
-###7. Add a script to discover and build models
+###Add a script to discover and build models
 
 Create [`discover-and-build.js`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/discover-and-build.js) in the
 [`bin` directory](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin).
@@ -241,11 +239,6 @@ The resulting objects are fully functional
 [LoopBack models](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/discover-and-build.js#L7) and thus contain all the
 features provided by LoopBack such as
 [`find()`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/discover-and-build.js#L10), etc.
-
-###8. Conclusion
-
-You've successfully implemented various PostgreSQL database features provided by LoopBack. See the [official documentation](http://docs.strongloop.com/display/LB/Defining+models) and [loopback-connector-postgresql](https://github.com/strongloop/loopback-connector-postgresql)
-for more information.
 
 ---
 
