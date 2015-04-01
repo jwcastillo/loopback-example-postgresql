@@ -10,17 +10,6 @@ npm install
 
 Then run any script in `server/bin` (for example, `node server/bin/discover-schema.js`).
 
-Contents:
-
-- [Prerequisites](#prerequisites)
-- [Create the application](#create-the-application)
-- [Install the connector](#install-the-connector)
-- [Configure the datasource](#configure-the-datasource)
-- [Add a model](#add-a-model)
-- [Add a script to migrate data](#add-a-script-to-migrate-data)
-- [Add a script to discover a schema](#add-a-script-to-discover-a-schema)
-- [Add a script to discover and build models](#add-a-script-to-discover-and-build-models)
-
 ##Prerequisites
 
 - Follow [Getting started with LoopBack](http://docs.strongloop.com/display/LB/Getting+started+with+LoopBack)
