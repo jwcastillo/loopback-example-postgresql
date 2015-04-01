@@ -17,14 +17,17 @@ Then run any script in `server/bin` (for example, `node server/bin/discover-sche
 
 ##Create the application
 
-- Name: `loopback-example-postgresql`
-- Directory to contain the project: `loopback-example-postgresql`
+Enter this to create a new application:
 
 ```
 $ slc loopback loopback-example-postgresql
-... # follow the prompts
 $ cd loopback-example-postgresql
 ```
+
+Follow the prompts to use the following:
+
+- Name: `loopback-example-postgresql`
+- Directory to contain the project: `loopback-example-postgresql`
 
 ##Install the connector
 
@@ -32,9 +35,9 @@ $ cd loopback-example-postgresql
 npm install --save loopback-connector-postgresql
 ```
 
-##Configure the datasource
+##Configure the data source
 
-Enter the following:
+Enter this to create a new data source:
 
 ```
 slc loopback:datasource accountDs
