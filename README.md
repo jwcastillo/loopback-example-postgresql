@@ -34,14 +34,15 @@ npm install --save loopback-connector-postgresql
 
 ##Configure the datasource
 
-####Datasource information
-- Datasource: `accountDs`
-- Connector: `PostgresSQL`
+Enter the following:
 
 ```
 slc loopback:datasource accountDs
-... # follow the prompts
 ```
+
+Follow the prompts to use the following:
+- Datasource: `accountDs`
+- Connector: `PostgresSQL`
 
 Add the [datasource configurations](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/datasources.json#L9-L13) to
 [`server/datasources.json`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/datasources.json).
@@ -50,7 +51,14 @@ NOTE: StrongLoop provides a demo server for convenience sake, but feel free to u
 
 ##Add a model
 
-###Model information
+Enter the following to create a model:
+
+```
+slc loopback:model Account
+```
+
+Follow the prompts to use the following:
+
 - Name: `Account`
   - Datasource: `accountDs`
   - Base class: `PersistedModel`
@@ -66,11 +74,6 @@ NOTE: StrongLoop provides a demo server for convenience sake, but feel free to u
     - `lastModifiedAt`
       - Date
       - Not required
-
-```
-slc loopback:model Account
-... # follow the prompts
-```
 
 ##Add a script to migrate data
 
