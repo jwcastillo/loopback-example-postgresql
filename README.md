@@ -102,7 +102,7 @@ node server/bin/automigrate.js
 This script creates [two models](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L5-L14) in the
 [specified data source](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L16).
 
-You can view the newly inserted data using built-in [API explorer](http://docs.strongloop.com/display/LB/Use+API+Explorer). Start the application with `slc start` and browse to [`localhost:3000/explorer`][explorer] to inspect the data.
+You can view the newly inserted data using built-in [API explorer](http://docs.strongloop.com/display/LB/Use+API+Explorer). Start the application with `node .` and browse to [`localhost:3000/explorer`][explorer] to inspect the data.
 
 ##Add a script to discover a schema
 
