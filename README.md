@@ -86,8 +86,6 @@ Create a directory for to store scripts.
 mkdir server/bin
 ```
 
-NOTE: `bin` is a directory name commonly used for executable files on unix and unix-like systems.
-
 Create [`automigrate.js`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js) inside the
 [`bin`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin) directory.
 
@@ -95,7 +93,7 @@ NOTE:  [`datasSource.automigrate()`](https://github.com/strongloop/loopback-exam
 
 ###Test the script
 
-**WARNING**: [`dataSource.automigrate()`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L18) creates a new table in the database if it doesn't exist. If the table already exists, it will be **DESTROYED** and **ALL** existing data will be dropped. If you want to keep the existing data, use `datasource.autoupdate()` instead.
+**WARNING**: [`dataSource.automigrate()`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L18) creates a new table in the database if it doesn't exist. If the table already exists, it is **destroyed** and **all** existing data is dropped. If you want to keep the existing data, use `datasource.autoupdate()` instead.
 
 ```
 node server/bin/automigrate.js
@@ -104,7 +102,7 @@ node server/bin/automigrate.js
 This script creates [two models](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L5-L14) in the
 [specified data source](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L16).
 
-You can view the newly inserted data using built-in [API explorer](http://docs.strongloop.com/display/LB/Use+API+Explorer). Start the application with `slc run` and browse to [`localhost:3000/explorer`][explorer] to inspect the data.
+You can view the newly inserted data using built-in [API explorer](http://docs.strongloop.com/display/LB/Use+API+Explorer). Start the application with `slc start` and browse to [`localhost:3000/explorer`][explorer] to inspect the data.
 
 ##Add a script to discover a schema
 
