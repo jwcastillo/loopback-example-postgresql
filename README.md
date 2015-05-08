@@ -3,9 +3,9 @@
 Basic instructions:
 
 ```
-git clone https://github.com/strongloop/loopback-example-postgresql.git
-cd loopback-example-postgresql
-npm install
+$ git clone https://github.com/strongloop/loopback-example-postgresql.git
+$ cd loopback-example-postgresql
+$ npm install
 ```
 
 Then run any script in `server/bin` (for example, `node server/bin/discover-schema.js`).
@@ -32,7 +32,7 @@ Follow the prompts to use the following:
 ##Install the connector
 
 ```
-npm install --save loopback-connector-postgresql
+$ npm install --save loopback-connector-postgresql
 ```
 
 ##Configure the data source
@@ -40,7 +40,7 @@ npm install --save loopback-connector-postgresql
 Enter this to create a new data source:
 
 ```
-slc loopback:datasource accountDs
+$ slc loopback:datasource accountDs
 ```
 
 Follow the prompts to use the following:
@@ -57,7 +57,7 @@ NOTE: StrongLoop provides a demo server for convenience sake, but feel free to u
 Enter the following to create a model:
 
 ```
-slc loopback:model Account
+$ slc loopback:model Account
 ```
 
 Follow the prompts to use the following:
@@ -83,7 +83,7 @@ Follow the prompts to use the following:
 Create a directory for to store scripts.
 
 ```
-mkdir server/bin
+$ mkdir server/bin
 ```
 
 Create [`automigrate.js`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js) inside the
@@ -96,7 +96,7 @@ NOTE:  [`datasSource.automigrate()`](https://github.com/strongloop/loopback-exam
 **WARNING**: [`dataSource.automigrate()`](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L18) creates a new table in the database if it doesn't exist. If the table already exists, it is **destroyed** and **all** existing data is dropped. If you want to keep the existing data, use `datasource.autoupdate()` instead.
 
 ```
-node server/bin/automigrate.js
+$ node server/bin/automigrate.js
 ```
 
 This script creates [two models](https://github.com/strongloop/loopback-example-postgresql/blob/master/server/bin/automigrate.js#L5-L14) in the
@@ -114,7 +114,7 @@ Create [`discover-schema.js`](https://github.com/strongloop/loopback-example-pos
 ###Test the script
 
 ```
-node server/bin/discover-schema.js
+$ node server/bin/discover-schema.js
 ```
 
 You should see:
@@ -203,7 +203,7 @@ Create [`discover-and-build.js`](https://github.com/strongloop/loopback-example-
 ###Test the script
 
 ```
-node server/bin/discover-and-build.js
+$ node server/bin/discover-and-build.js
 ```
 
 You should see:
